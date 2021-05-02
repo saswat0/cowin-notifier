@@ -2,7 +2,7 @@
 Simple email notifier app to scrape the cowin portal for getting available vaccination slots for your age and pincode
 
 ### Usage
-*   Generate an app password for your gmail application using steps given [here](https://support.google.com/accounts/answer/185833p=InvalidSecondFactorvisit_id=637554658548216477-2576856839&rd=1) (you might have to enable two-factor authentication for this)
+*   Generate an app password for your gmail application using steps given [here](https://support.google.com/accounts/answer/185833?p=InvalidSecondFactor&visit_id=637554658548216477-2576856839&rd=1) (you might have to enable two-factor authentication for this)
 *   Fill in the requisite details in the .env file
 *   To start the application, run:
     ```bash
