@@ -43,7 +43,7 @@ function getSlotsForDate(DATE) {
             let validSlots = sessions.filter(slot => slot.min_age_limit <= AGE &&  slot.available_capacity > 0)
             console.log({date:DATE, validSlots: validSlots.length})
             if(validSlots.length > 0) {
-                notifyMe(validSlots);
+                notifyMe(validSlots, DATE);
             }
         })
         .catch(function (error) {
@@ -53,9 +53,9 @@ function getSlotsForDate(DATE) {
 
 async function
 
-notifyMe(validSlots){
+notifyMe(validSlots, date){
     let slotDetails = JSON.stringify(validSlots, null, '\t');
-    notifier.sendEmail(EMAIL, 'VACCINE AVAILABLE', slotDetails, (err, result) => {
+    notifier.sendEmail(EMAIL, 'VACCINE SLOT FOUND', slotDetails, date, (err, result) => {
         if(err) {
             console.error({err});
         }
